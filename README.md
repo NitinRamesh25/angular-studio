@@ -1,1 +1,1 @@
-# angular-studio
+# Angular Studio
