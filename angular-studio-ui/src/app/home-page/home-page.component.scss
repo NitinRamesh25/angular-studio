@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+$icon-width: 18rem;
+$icon-height: 18rem;
+
+#home-page {
+  background-color: #34495e;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#logo {
+  clip-path: polygon(50% 0%, 100% 10%, 90% 80%, 50% 100%, 10% 80%, 0% 10%);
+  width: $icon-width;
+  height: $icon-height;
+  font-size: $icon-height * 0.8;
+  color: white;
+  background-color: #d42f53;
+  position: relative;
+  display: grid;
+  place-content: center;
+  user-select: none;
+
+  #logo-mask {
+    position: absolute;
+    top: 0px;
+    left: $icon-width / 2;
+    height: $icon-height;
+    width: $icon-width / 2;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.project-btn {
+  padding: 0.7rem 0.7rem;
+  color: white;
+  background: #d42f53;
+  width: 12rem;
+  border-radius: 2rem;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+@keyframes expanding-btn {
+  from {
+    width: 12rem;
+  }
+  to {
+    width: 20rem;
+  }
+}
+
+.project-btn:hover {
+  animation-name: expanding-btn;
+  animation-duration: 0.4s;
+  width: 20rem;
+}
