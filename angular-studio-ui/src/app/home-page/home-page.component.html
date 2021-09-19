@@ -4,7 +4,12 @@
     <div id="logo-mask"></div>
   </div>
 
-  <span class="project-btn">New Project</span>
+  <span class="project-btn" (click)="createNewProject()">New Project</span>
 
   <span class="project-btn">Open Project</span>
+
+  <div id="new-project-form">
+    <label for="project-path">Project path</label>
+    <input name="project-path" type="text" />
+  </div>
 </div>

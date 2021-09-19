@@ -12,6 +12,7 @@ $icon-height: 18rem;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
 }
 
 #logo {
@@ -32,7 +33,41 @@ $icon-height: 18rem;
     left: $icon-width / 2;
     height: $icon-height;
     width: $icon-width / 2;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.shrinked-logo {
+  animation: shrinking-logo 1s forwards;
+}
+
+@keyframes shrinking-logo {
+  from {
+    width: $icon-width;
+    height: $icon-height;
+    font-size: $icon-height * 0.8;
+  }
+  to {
+    width: $icon-width / 4;
+    height: $icon-height / 4;
+    font-size: $icon-height * 0.2;
+  }
+}
+
+.shrinked-logo-mask {
+  animation: shrinking-logo-mask 1s forwards;
+}
+
+@keyframes shrinking-logo-mask {
+  from {
+    left: $icon-width / 2;
+    height: $icon-height;
+    width: $icon-width / 2;
+  }
+  to {
+    left: $icon-width / 8;
+    height: $icon-height / 4;
+    width: $icon-width / 8;
   }
 }
 
@@ -45,6 +80,12 @@ $icon-height: 18rem;
   text-align: center;
   user-select: none;
   cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.project-btn:hover {
+  animation: expanding-btn 0.4s forwards;
 }
 
 @keyframes expanding-btn {
@@ -56,8 +97,6 @@ $icon-height: 18rem;
   }
 }
 
-.project-btn:hover {
-  animation-name: expanding-btn;
-  animation-duration: 0.4s;
-  width: 20rem;
+#new-project-form {
+  display: none;
 }
